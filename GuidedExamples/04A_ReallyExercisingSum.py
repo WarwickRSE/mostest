@@ -1,15 +1,29 @@
 from SecretFunctions.OiYou import *
 
+#ENTRY POINT
 if __name__ == "__main__":
+
+    #In this exercise we're going to see if the tests you wrote for the sum function actually
+    # catch some common errors. Don't go looking at the code yet!
+    # Write (or copy-paste) your tests below using assert. In both cases you should
+    # be able to detect issues with the summing code
 
     try:
         #Put your tests here. Here's an example call
-        b = sumItems([0.1]*10)
-
-        # Some more subtle errors in this one
-        c = sumItems2([0.1]*10)
+        a = sumItems([0.1]*10)
 
     except AssertionError as e:
         print("Well DONE, you caught some errors!")
     finally:
         print("Try again - I promise the code is broken!!") 
+
+
+    try:
+        # There's some more subtle errors in this one
+        #How do your tests stack up?
+        b = sumItems2([0.1]*10)
+
+    except AssertionError as e:
+        print("Well DONE, you caught some errors!")
+    finally:
+        print("Try again - I promise the code is broken here too!!") 

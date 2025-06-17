@@ -2,13 +2,6 @@
 #ENTRY POINT
 # This file is a continuous script. It is not a model of how to write nice code, it's just an exercise!
 
-# DECORATORS
-# Decorators - functions which act on another function to produce a new function
-# That's probably not a very helpful description, but it is accurate. Decorators
-# let us wrap new function around an existing function. Best explained with an example
-
-
-
 # RESOURCE MANAGEMENT
 # The 'with' construct (called a context manager) is used to manage resources (e.g. a file, a database, a socket) and make sure
 # they are cleaned up when the block ends. You'll probably see it used with files, to make sure they

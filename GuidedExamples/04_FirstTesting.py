@@ -2,8 +2,8 @@
 def sumItems(items):
 
     sum = 0.0
-    for i in range(len(items)):
-        sum = sum + items[i]
+    for item in items:
+        sum = sum + item
     return sum
 
 #ENTRY POINT
@@ -15,3 +15,14 @@ if __name__ == "__main__":
     #Write your tests below for the 'sumItems' function
 
     #Recall what we dicussed in the introduction - what sorts of test inputs can you give?
+
+    #Here's an example of generating a list of inputs and calling the function:
+
+    a = [0.1]
+    for i in range(10):
+        a.append(a[i]*0.1) # Smaller every time
+    print(sumItems(a))
+
+    #And here's a Python hint - you can generate a list of N of the same item like this:
+    b = [1.0]*10
+    print(b, len(b))

@@ -14,7 +14,7 @@ print("a == b? {}".format(a == b))
 # Now type is different, so a and b are not 'identical'
 print("a is b? {}".format(a is b))
 
-#Minor GOTCHA - in the first case a is b only due to optimisation
+#Minor GOTCHA - in the first case a is b due to optimisation
 #Behind the scenes, we only need one copy of the number '1', or '28' or whatever
 
 c = (1,2)

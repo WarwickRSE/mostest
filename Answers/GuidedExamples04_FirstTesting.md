@@ -20,5 +20,3 @@ We could use some other things we know from maths, such as the fact that the sum
 
 We might even want to check against 'bad inputs' such as not providing a list at all, or providing a list of non-addable items. My test function wont handle these - you can explore this idea more in the advanced section on Test Driven Development.
 
-## Things you should consider
-

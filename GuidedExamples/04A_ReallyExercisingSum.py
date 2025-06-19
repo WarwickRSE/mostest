@@ -1,4 +1,4 @@
-from SecretFunctions.OiYou import *
+from SecretFunctions.OiYou import sumItems, sumItems2
 
 #ENTRY POINT
 if __name__ == "__main__":

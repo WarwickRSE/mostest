@@ -54,27 +54,3 @@ def sumItems2(items):
 
 
 
-#This is a newton-raphson iterative root finder which takes extra precautions
-# against common errors
-
-def newton_raphson_cautious(guess, f, f_prime):
-    """"Find a root near the guess of the equation f. f_prime should be the first derivative"""
-    #NOTE: f and f_prime should accept a single argument, pt, and return the value at this point
-
-    _max_iter = 100 # Avoid an infinite loop
-    threshold = max(guess*1e-6, 1e-10) # Accuracy - related to guess but protect from 0 or too small
-    prev = guess
-    diff = threshold * 10 # Definitely > threshold, whatever value we might choose!
-    iter = 0
-    while iter < _max_iter and abs(diff) > threshold:
-        next = prev - f(prev)/f_prime(prev)
-        diff = next - prev
-        prev = next
-        iter = iter + 1
-
-    if iter >= _max_iter:
-       # Probably maxed out...
-       raise RuntimeError("Max iterations {} exceeded without meeting threshold change".format(_max_iter))
-    
-    return next
-

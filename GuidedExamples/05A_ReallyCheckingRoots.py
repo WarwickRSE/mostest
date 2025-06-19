@@ -1,4 +1,5 @@
 from functools import partial
+from SecretFunctions.helpers import newton_raphson_cautious
 
 #For simplicity, we will assume a polynomial so we can do an analytic derivative
 def polynomial(pt, coeffs):

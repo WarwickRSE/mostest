@@ -73,3 +73,11 @@ if __name__ == "__main__":
     #After running the tests you already wrote, try and think of all the 'negative space' we might want this function to find and reject. Write some tests to check any you think of
     
     # Finally, compare the two implementations. Did you catch the same issues that I did? If I missed any, feel free to let me know!
+
+
+
+    #FINAL NOTE on this example: In this example we have been examining the question of testing, and
+    # I have provided some functions which do a lot of checking. This is not always the right thing to do
+    # Every check costs time, and it is not always clear how 'defensive' our functions should be
+    # Do not take this example as an exhortation to add every check you can think of into every function!
+    # Aim to strike a balance between explicit checks, clear code, and performance!!

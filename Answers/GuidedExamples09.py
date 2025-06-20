@@ -13,7 +13,7 @@ def test_is_even():
     assert( is_even(a) or is_even(a+1))
 
 def test_is_even2():
-    a = 2
+    a = 3
     assert( is_even(a) or not is_even(a))
 
 def test_is_even3():

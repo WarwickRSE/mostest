@@ -1,15 +1,15 @@
-from SecretFunctions.helpers import * # Polynomial and polynomial_deriv like the previous example
+from SecretFunctions.helpers import * # polynomial and polynomial_deriv like the previous example, and a fixed Newton-Raphson
 from functools import partial
 
 from math import sqrt
 
 def velocity_from_kinetic_energy(ke, mass):
-    """ K.E. = 1/2 m v^2 - this inverts this"""
+    """ K.E. = 1/2 m v^2 - this inverts this to calculate v from a given KE and mass"""
 
     return sqrt(ke*2.0/mass)
 
 def ordinal_number(num):
-    """ Ordinal numbers are like 1st, 2nd, 3rd, 4th etc"""
+    """ Ordinal numbers are like 1st, 2nd, 3rd, 4th etc. This takes a number and returns this string """
 
     if num == 1:
         return "1st"
@@ -77,7 +77,8 @@ if __name__ == "__main__":
 
 
     #FINAL NOTE on this example: In this example we have been examining the question of testing, and
-    # I have provided some functions which do a lot of checking. This is not always the right thing to do
+    # I have provided some functions which do a lot of checking internally.
+    # This is not always the right thing to do.
     # Every check costs time, and it is not always clear how 'defensive' our functions should be
     # Do not take this example as an exhortation to add every check you can think of into every function!
     # Aim to strike a balance between explicit checks, clear code, and performance!!

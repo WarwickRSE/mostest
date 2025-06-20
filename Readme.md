@@ -25,11 +25,12 @@ Part 1 of this workshop is all about writing single tests - how to verify truth 
 - 02_Asserting - using 'assert' to test for truth or falsity of conditions
 - \* 03_Asserting_part2 - a bit more about assert and exception handling
 - 04_FirstTesting - writing useful tests for a first simple function
-- 04A_ReallyExercisingSum - a broken sum function to check your work. **Please don't look at the code in** 'SecretFunction/OiYou.py' - this is a broken sum to test you!
-- 05_TestingIsNotDoingItAgain - as the title says, this exercise gets you thinking about the importance of not re-writing the same code and calling it a test
-- 06_NegativeSpaceTesting - 'negative space' is the things a code shouldn't do - and it's important to test these as well as the things it should
-- \* Advanced 07_TDD_lite - a quick exercise in Test Driven Development
-- \* Advanced 08_FloatingPoint_extras - some extra stuff about numbers which can be important later
+- 04A_ReallyExercisingSum - a broken sum function to check your work. *Please don't look at the code in* 'SecretFunction/OiYou.py' - this is a broken sum to test you!
+- 05_CheckingADifferentWay - as the title says, this exercise gets you thinking about the importance of not re-writing the same code and calling it a test
+- 05A_ReallyCheckingRoots - explores an inexact root-finder, with similar problems to the previous exercise
+- 06_NegativeSpace- 'negative space' is the things a code shouldn't do - and it's important to test these as well as the things it should
+- \* Advanced 07_TDD_lite - a quick exercise in Test Driven Development, with a nice Easter-Egg if you're interested in early computers. The "CDC 6600" was a super fast computer in the mid 60s!
+- \* Advanced 08_FloatingPoint - some extra stuff about numbers which can be important in real situations
 - \* Advanced 09_CoveringTheBases - why testing every line of code still doesn't make you certain
 
 ### PyTest Examples
@@ -37,7 +38,7 @@ Part 1 of this workshop is all about writing single tests - how to verify truth 
 Part 2 of this workshop uses PyTest to build a real Test Suite out of simple tests similar to the ones we wrote in part 1. Once we start to put them together, we need a more systematic way of running
 them and recording the results. Testing libraries also tend to offer 'more advanced' checks in a streamlined form, adding 'syntactic sugar' - doing things which we could do within Python in a way which is clearer and more indicative, and 'sweeter' to use.
 
-Before tackling the exercises below, you will need to install PyTest and check you can run it. 
+Before tackling the exercises below, you will need to install PyTest and check you can run it.
 
 - 01_BasicExample - a basic test, to make sure you've got things working
 - 02_ASimpleTestSuite - using the tests from before in the new system

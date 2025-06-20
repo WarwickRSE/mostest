@@ -25,11 +25,16 @@
 #This is both very simple (exhaustive search on the domain [0 to 150] for each x, and n=5
 # and a little bit tricky.
 #You will need to write something to verify whether a number y is x^5 for any integer x
-# You CAN"T just raise it to the power 1/5th numerically. 
+# You CAN"T just raise it to the power 1/5th numerically - it's not precise enough to distinguish
+# between being an integer, and extremely close to an integer
+# If you get stuck, see the hint in Answers/GuidedHint_07.md
+ 
 #Write some tests for such a function
-# Then, write the function
+# Then, and only then, write the function
+#If the tests pass, well done. Reflect on whether having thought about all the tests 'tipped you off'
+# to the things to consider when writing the function
 
 #If you like, you can write the rest of the code to do the exhaustive search
 # (and if you're smart, you might notice that while the x's can all be the same, you need
 # not check the order permutations, which speeds things up rather!)
-# My obvious Python runs in about 7 seconds and is available in Answers/GuidedExamples07
+# My 'first draft' Python runs in about 7 seconds and is available in Answers/GuidedExamples07

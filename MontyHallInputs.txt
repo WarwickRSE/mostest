@@ -1,0 +1,5 @@
+The content of this file should be like below, with a single equals sign and an integer on the r.h.s
+Lines which aren't like that get ignored
+nt = 10000
+nd = 3
+swap = 0

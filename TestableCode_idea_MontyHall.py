@@ -96,13 +96,53 @@ def run_sim(trials, n_doors, swap):
       if win: wins = wins + 1
     return wins
 
+def read_input_file(filename):
+    """ Read some key-value items from a file"""
+    with open(filename, 'r') as infile:
+        lines = infile.readlines()
+    vals = {}
+    for line in lines:
+        try:
+            segs = line.split('=')
+        except:
+            pass # Skip this line
+        try:
+            vals[segs[0].strip()] = int(segs[1])
+        except:
+            pass # Skip line - not an integer etc
+    return vals
+
+def report_wins(count, trials, doors, swap):
+
+    if swap:
+        swap_wins = count
+        stick_wins = trials - count
+    else:
+        swap_wins = trials - count
+        stick_wins = count
+    print("Ran {} trials with {} doors".format(trials, doors))
+    print("Won {} of {} times ({} %) by swapping".format(swap_wins, trials, (swap_wins/trials * 100)))
+    print("Won {} of {} times ({} %) by sticking".format(stick_wins, trials, (stick_wins/trials * 100)))
+
 if __name__=="__main__":
 
-    nt = 10000
-    nd = 3 # Usual problem is 3 doors
+    #Read the inputs from file
+    filename = 'MontyHallInputs.txt'
+    inputs = read_input_file(filename)
+    try:
+        nt = inputs['nt']
+    except:
+        nt = 1000 # Default
+    try:
+        nd = inputs['nd']
+    except:
+        nd = 3 # Usual problem is 3 doors
+    try:
+        swap = inputs['swap'] == 1
+    except:
+        swap = True
 
-    swap_wins  = run_sim(nt, nd, True)
-    stick_wins = run_sim(nt, nd, False)
+    wins  = run_sim(nt, nd, swap)
 
-    print("Won {} of {} times ({} %) by swapping".format(swap_wins, nt, (swap_wins/nt * 100)))
-    print("Won {} of {} times ({} %) by sticking".format(stick_wins, nt, (stick_wins/nt * 100)))
+    report_wins(wins, nt, nd, swap)
+

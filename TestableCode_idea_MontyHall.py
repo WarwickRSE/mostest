@@ -1,7 +1,11 @@
 # This code 'checks' the Monty Hall problem (see wikipedia for details)
 # Given 3 doors, two containing goats and one a car, a contestant chooses a one. 
-# The host now reveals a goat (important - introducing new information)
-# Is the contestant better to stick or swap?
+# The host now reveals a goat (important - thereby introducing new information)
+# Is the contestant better to stick with their first choice or swap to the other option?
+
+#Variations on the problem use more initial doors, one car, and have the host reveal all but
+# 2 doors - the one the contestant originally picked, and one other, with one of these two
+# guaranteed to be the prize
 
 #We're going to generate a bunch of random setups, random reveals and calculate the probability of winning
 
@@ -22,12 +26,14 @@ def generate_door_layout(n):
     return doors
 
 def contestant_pick(doors):
+    """Pick a random door from the given list and return its index"""
 
     #Note: function takes doors list not its length in case we wanted
     # more sophisticated picking. Sig. matches host_pick too which helps clarity
     return random_pick(len(doors))
 
 def host_pick(doors, contestant_pick):
+    """Pick all but 2 doors from the given list - one will be the contestant's pick, and the two will definitely contain the prize door"""
     # In general the host can reveal any number of doors - we'll do all but ONE alternate
     # They never select the one the contestant has selected, NOR the one with the prize
 
@@ -60,6 +66,7 @@ def host_pick(doors, contestant_pick):
     return reveals
 
 def run_trial(n_doors, swap):
+    """Run a single realisation of the game with n_doors doors, and contestant strategy swap = True or False"""
 
     # Better verify we have at least 3 doors
     assert(n_doors >= 3)
@@ -81,6 +88,7 @@ def run_trial(n_doors, swap):
     return doors[cp-1]
 
 def run_sim(trials, n_doors, swap):
+    """Run 'trials' iterations of the game, with the given number of doors and contestant strategy"""
 
     wins = 0
     for i in range(trials):

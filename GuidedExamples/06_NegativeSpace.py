@@ -41,11 +41,15 @@ if __name__ == "__main__":
         print("A 1kg object with a kinetic energy of -50J is moving at {} m/s".format(velocity_from_kinetic_energy(-50, 1))) 
     except Exception as e:
         print("Test failed successfully with ERROR: ", e)
+    else:
+        # This part runs only if we DID NOT get an error
+        print("I expected that to fail!")
+
     try:
         print("A -1kg object with a kinetic energy of -50J is moving at {} m/s".format(velocity_from_kinetic_energy(-50, -1))) 
     except Exception as e:
         print("Test failed successfully with ERROR: ", e)
-    finally:
+    else:
         print("OOOPS! Are you SURE that's physically meaniningful?")
 
     #So in this case, our function as written does something meaningless. We'd really rather catch that! So can you go fix the function to raise its own error (instead of relying on sqrt to do it?)
@@ -58,7 +62,7 @@ if __name__ == "__main__":
         print("Well done! You came {} in this race!".format(ordinal_number(3.14)))
     except Exception as e:
         print("Test failed successfully with ERROR: ", e)
-    finally:
+    else:
         print("OOOPS! Are you sure that's a countable number?")
     # Unless it's competitive pi-eating, I doubt that sentence above is what we intended!
     # Can you add a test for the 'ordinal_number' function to check that it only accepts

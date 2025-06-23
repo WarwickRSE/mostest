@@ -13,7 +13,7 @@ We have marked the 'harder' ones with a '*' in the list below - you may wish to 
 We've also marked the introductory ones with a '!' - you may wish to skip these entirely if you are familiar with Python already.
 
 Otherwise we recommend starting at the beginning, working through the examples, asking plenty of questions, and exploring anything you aren't sure about thoroughly.
-To avoid committing you to using any particular way of running Python (one of us might still prefer Vim in a terminal) we have supplied simple code files, with __TBC!!!__ an ipynb version too.
+To avoid committing you to using any particular way of running Python (one of us might still prefer Vim in a terminal) we have supplied simple code files/scripts. If you prefer notebooks, you can use these for the first half, but we strongly recommend using a command-line for the second part.
 Each file has 'ENTRY POINT' marked somewhere - start at this line and follow the typed instructions
 to complete the exercises.
 
@@ -38,12 +38,14 @@ Part 1 of this workshop is all about writing single tests - how to verify truth 
 Part 2 of this workshop uses PyTest to build a real Test Suite out of simple tests similar to the ones we wrote in part 1. Once we start to put them together, we need a more systematic way of running
 them and recording the results. Testing libraries also tend to offer 'more advanced' checks in a streamlined form, adding 'syntactic sugar' - doing things which we could do within Python in a way which is clearer and more indicative, and 'sweeter' to use.
 
-Before tackling the exercises below, you will need to install PyTest and check you can run it.
+Before tackling the exercises below, you will need to install PyTest. The first exercise will check
+that it is running correctly.
 
-- 01_BasicExample - a basic test, to make sure you've got things working
-- 02_ASimpleTestSuite - using the tests from before in the new system
-- 03_TestableCode - now you're on your own - write a test suite for the given code from scratch
-- \* Advanced 04_InterestingPyTestFeatures - suggestions for tackling more interesting avenues in testing
+- test_01_first_run - a basic test, just to make sure you've got things working
+- test_02_selecting - how to run only a specific function (for quick hacky tests)
+- test_03_test_file - separating tests from code, and putting the tests we wrote before into the suite
+- test_04_next_steps - from here you're on your own - the task is to write a test suite for the given code from scratch
+- \* test_05_pytest_features - a quick walkthrough of some of pyTests extra features
 
 ### Python Constructs
 

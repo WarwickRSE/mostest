@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # Now check it
     #YOUR CODE HERE
 
-    #What about 'a is b'? What is different?
+    #What about 'a is b'? What is different? (For details on this, see PythonConstructs/IdentityVsEquality.py - but generally you should be using '==' unless you have a specific reason for 'is')
     #YOUR CODE HERE
 
     name1 = "Alice"

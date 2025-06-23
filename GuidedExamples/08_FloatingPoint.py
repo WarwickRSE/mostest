@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
     print("Exceeding the max: max * 10 = {}".format(sys.float_info.max*10))
 
-    #If you want to see more about inf, and the mysterious NaN (not a number) try https://gist.github.com/hratcliffe/a48cd8cb03c98c897d6d4564ad55c402
+    #If you want to see more about how inf, and the mysterious NaN (not a number) behave, try https://gist.github.com/hratcliffe/a48cd8cb03c98c897d6d4564ad55c402
 
 
     print("----------------------------------")

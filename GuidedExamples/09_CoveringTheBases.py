@@ -1,6 +1,7 @@
 
+#ENTRY POINT
 #Coverage testing refers to checking whether every line of code in a file
-# has been executed as part of a tes
+# has been executed as part of a test
 # One would like to think that this means the lines have been tested.
 # This example shows how that is NOT the case
 
@@ -22,7 +23,7 @@
 # off-by-one, flipped comparisons etc. 
 # Your goal is for your tests to find no errors in either the correct or the broken code, while looking like an actual functioning test suite
 # This is (hopefully) a bit of fun, but has its roots in a very real idea called 'mutation testing' -
-# checking that a test suite actually detects broken code
+# checking that a test suite actually detects broken code by running the tests against a broken (mutated) version of the code
 
 #The functions to check are:
 
@@ -32,5 +33,4 @@
 from SecretFunctions import examples
 #from SecretFunctions import examples_broken
 
-
-
+#YOUR (BROKEN) TESTS HERE

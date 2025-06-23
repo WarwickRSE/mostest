@@ -47,3 +47,6 @@ def test_all():
 
     # SO we should really take advantage of our tools, and let PyTest collect the tests for us
     # We'll do this in the next example
+
+# Before you go - notice this file alone wont actually run anything, it only defines functions
+# We should NOT have code outside of functions (or the __name__ guard) in test files

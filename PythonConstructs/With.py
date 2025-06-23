@@ -1,6 +1,6 @@
 
 #ENTRY POINT
-# This file is a continuous script. It is not a model of how to write nice code, it's just an exercise!
+# This file is a continuous script. It is not a model of how to write nice code, it's just an exercise! You can read from top to bottom, running along the way
 
 # RESOURCE MANAGEMENT
 # The 'with' construct (called a context manager) is used to manage resources (e.g. a file, a database, a socket) and make sure

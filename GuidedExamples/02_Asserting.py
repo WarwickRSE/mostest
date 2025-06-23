@@ -46,6 +46,7 @@ if __name__ == "__main__":
     #Make sure you're happy with the other sorts of things you can put inside 'assert' by writing
     # the code for the true and false cases of the following expressions:
     c = 3.14
+    lst = [1, 2, 3]
 
     # Example:
     # c is at least 3 -> assert c >= 3 (successful) assert c < 3 (fails)
@@ -61,3 +62,9 @@ if __name__ == "__main__":
     #Case E: c squared is less than 10
 
     #Case F (Optional, tricky if you dont know how): c is a whole number (integer)
+
+    #Case G: lst contains the value 2
+
+    #Case H: lst does not contain the value 4
+
+    #Case J: the length of lst is greater than 0

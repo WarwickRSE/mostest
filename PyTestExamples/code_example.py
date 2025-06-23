@@ -9,11 +9,16 @@ def solve_quadratic(a, b, c):
     # Special cases:
     if a == 0 and b != 0: 
         return [-c/b]
+    elif a == 0 and b == 0 and c == 0:
+        # Bad - any x is a solution!
+        raise ValueError("Equation 0x^2 + 0x + 0 is trivial")
     elif c == 0:
+        #One of a and b is not zero to get here
         return [0]
     elif a == 0 and c!= 0:
+        # b must be zero to get here, and c is not
         #Bad - no solution
-        raise ValueError("Quadratic with 0x^2 + 0x + c has no roots")
+        raise ValueError("Equation 0x^2 + 0x + c has no roots")
 
     roots = []
     disc= b*b  - 4.0 *a*c

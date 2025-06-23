@@ -4,31 +4,38 @@ if __name__ == "__main__":
 
     #This will succeed
     assert(True)
-    #This will raise an error and the program will exit. Uncomment it, run this program and see
+    #The line below will raise an error and the program will exit. Uncomment it, run this program and see
     #assert(False)
-
-    #Values such as 1 are 'truthy' (evaluate as true). 0 is 'falsy' - evaluates as false. Later we will see some other 'falsy' values
 
     a = 1
 
+    # A comparison like ' x == 1 ' returns either True or False, and this is what we can 'feed' to the assert function
     #Use the 'assert' function to verify that a is 1
+    #YOUR CODE HERE
+
+
+    #Note that values such as 1 are 'truthy' (evaluate as true). 0 is 'falsy' - evaluates as false. Later we will see some other 'falsy' values
+    # See what happens if you forget the condition and just assert the 'truthy-ness' of 'a'
+    #YOUR CODE HERE
 
     #Now try 'assert'ing something untrue - what happens?
+    #YOUR CODE HERE
 
     b = 1.0
-
-    #Before running it, try and decide what 'a == b' will assert as
+    #Hang on - before writing any code, try and decide what 'a == b' will assert as
     # Now check it
+    #YOUR CODE HERE
 
     #What about 'a is b'? What is different?
-
+    #YOUR CODE HERE
 
     name1 = "Alice"
     name2 = "Bob"
     #Use 'assert' to check these are different strings:
+    #YOUR CODE HERE
 
     #Now check their lengths are different using assert:
-
+    #YOUR CODE HERE
 
     #OPTIONAL:
     #Using 'assert', identify some other 'falsy' values - values which cause
@@ -37,7 +44,7 @@ if __name__ == "__main__":
 
     #CORE
     #Make sure you're happy with the other sorts of things you can put inside 'assert' by writing
-    # the code for the true and false cases of the following expressions
+    # the code for the true and false cases of the following expressions:
     c = 3.14
 
     # Example:

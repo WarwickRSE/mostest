@@ -23,9 +23,9 @@ Part 1 of this workshop is all about writing single tests - how to verify truth 
 
 - ! 01_HelloWorld - for Python newbies, or to get the hang of how we express our exercises. Plain old "Hello World"
 - 02_Asserting - using 'assert' to test for truth or falsity of conditions
-- \* 03_Asserting_part2 - a bit more about assert and exception handling
+- \* 03_Asserting_part2 - a bit more about assert and exception handling (you might want to skip this and come back later)
 - 04_FirstTesting - writing useful tests for a first simple function
-- 04A_ReallyExercisingSum - a broken sum function to check your work. *Please don't look at the code in* 'SecretFunction/OiYou.py' - this is a broken sum to test you!
+- 04A_ReallyExercisingSum - a broken sum function to check your work in the previous exercise. *Please don't look at the code in* 'SecretFunction/OiYou.py' - this is a broken sum to test you!
 - 05_CheckingADifferentWay - as the title says, this exercise gets you thinking about the importance of not re-writing the same code and calling it a test
 - 05A_ReallyCheckingRoots - explores an inexact root-finder, with similar problems to the previous exercise
 - 06_NegativeSpace- 'negative space' is the things a code shouldn't do - and it's important to test these as well as the things it should

@@ -11,7 +11,7 @@ def solve_quadratic(a, b, c):
     if(disc >0):
         sqrt_d = sqrt(disc)
     elif (disc < 0):
-        sqrt_d = sqrt(-disc) * 1j  #Complex roots
+        sqrt_d = sqrt(-disc) * 1j  #Complex roots (Python uses 'j' for sqrt(-1))
         
     if(disc == 0):
         roots.append(-b)
@@ -25,12 +25,15 @@ def solve_quadratic(a, b, c):
 #ENTRY POINT
 if __name__ == "__main__":
 
-    #When testing simple code it can be tempting to just repeat the same task
-    #However, there's a high chance we're going to make exactly the same mistake
+    #When testing simple code it can be tempting to write a test which just does the same thing as the code over again
+    #However, there's a high chance we're going to make exactly the same mistake in both
     #(In fact, I have heard of people literally copy-pasting the code into the test...)
-    #So we need to find a different angle. In real cases, this probably ends up with us
+    # So we need to find a different angle. In real cases, this probably ends up with us
     # having to do a bunch of 'not quite perfect' checks, and hoping that we don't
     # miss any edge cases. This is perhaps the biggest challenge to effective testing
+    # If we're lucky, we can come up with some properties of the outputs which we can check
+    # without having to actually solve the problem. If we can then run with a good range of inputs,
+    # we can be pretty confident that our code is working.
 
     #Let's start simple. 
     # Write some tests for the quadratic root finder above.
@@ -42,3 +45,5 @@ if __name__ == "__main__":
     print(solve_quadratic(1, -1, -1))
 
     # There's some hints on the 'solution' in the file Answers/GuidedExample05.md
+
+    #YOUR CODE HERE

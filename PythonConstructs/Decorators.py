@@ -7,6 +7,10 @@
 # That's probably not a very helpful description, but it is accurate. Decorators
 # let us wrap new function around an existing function. Best explained with an example
 
+#For simplicity we'll do the example with a function that doesn't return anything, but
+# you can 'capture' the return value and return it if needed. We'll also assume only positional
+# arguments (not ones passed by name)
+
 # Suppose we want to time a whole bunch of functions. We could put start, stop and print in at every point in our code - but what if we want to change which timer we use, or swap from printing to logging? We'd prefer to keep it all in one place.
 
 #A boring wrapper
@@ -63,3 +67,28 @@ def func_body():
 @wrap_timer
 def func_main():
     ...
+
+# What if our wrapped function returns something? We can handle that like:
+def wrap_with_return(f):
+    def new_f(*args):
+        # Whatever code we want here
+        ret = f(*args)
+        # Whatever other code we want
+        return ret  #Pass on the return value
+    return new_f
+
+
+#By the way, we can parameterise a decorator
+def print_message_before_running(message):   # Getting parameter to decorator
+    def decorator(f):  # Creating decorator
+        def wrapper(*args):
+            print(message)
+            return f(*args)
+        return wrapper
+    return decorator
+
+@print_message_before_running("Function Decorated With This Message")
+def func2(x, y, z):
+    return x + y + z
+
+print("Mucky parameterised decorator: {}".format(func2(1, 2, 3)))

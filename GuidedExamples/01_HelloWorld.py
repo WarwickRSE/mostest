@@ -15,8 +15,8 @@ if __name__ == "__main__":
     #YOUR CODE HERE
     #Call the HelloWorld function. Pass it your name
 
-    #Now, run the function. Make sure you understand what line 10 is doing.
-    #Instead of running this script, start python/a notebook and import it. Now, run just the HelloWorld function
+    #Now, run this script. Make sure you understand what line 10 is doing.
+    #Instead of _running_ the script, start python/a notebook and import it. Now, run just the HelloWorld function
 
     #Once you've got that working in your chosen runtime, you're good to move on
     #If you have any problems or questions, we're here to help!

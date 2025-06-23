@@ -19,4 +19,3 @@ We should look at very small and very large values.
 We could use some other things we know from maths, such as the fact that the sum of 1/2^n is 2 and if we stop at N then the answer is 2-1/2^N
 
 We might even want to check against 'bad inputs' such as not providing a list at all, or providing a list of non-addable items. My test function wont handle these - you can explore this idea more in the advanced section on Test Driven Development.
-

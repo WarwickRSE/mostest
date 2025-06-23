@@ -1,6 +1,7 @@
 def myFunction():
     #In Python, the 'try' 'except' construction is used to 'catch' errors so that we can
-    # do something useful with them. 
+    # do something useful about them. Sometimes we can fix the problem and try again, sometimes
+    # we can print some useful information, etc
 
     #What will this block of code do? Run it and find out!
     try:
@@ -9,7 +10,7 @@ def myFunction():
         # The statement above catches ANY sort of error and hands it to us in the variable 'e'
         print("An error occured: ", e)
 
-    #Catching all errors is Very. Bad. Form. - it leaves us not knowing what went wrong
+    #Catching all errors is Very. Bad. Form. - we probably don't know what to do with some potential errors, so we should leave those for (hopefully) another part of the program to handle
     # Instead we should usually catch specific kinds of error. For instance:
     emptyDict = {} #An empty dictionary (for other-language programmers - aka map, key-value store, associative array etc)
     try: 

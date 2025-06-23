@@ -3,13 +3,13 @@ from math import pi
 if __name__ == "__main__":
 
     #This will succeed
-    assert(True)
+    assert True
     #The line below will raise an error and the program will exit. Uncomment it, run this program and see
-    #assert(False)
+    #assert False
 
     a = 1
 
-    # A comparison like ' x == 1 ' returns either True or False, and this is what we can 'feed' to the assert function
+    # A comparison like ' x == 1 ' returns either True or False, and this is what we can 'feed' to the assert statement (not a function - we don't need '(' and ')' and they're best not used)
     #Use the 'assert' function to verify that a is 1
     #YOUR CODE HERE
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     #OPTIONAL:
     #Using 'assert', identify some other 'falsy' values - values which cause
-    # an assertion error. 0 is such. What string value is there? What can you put in a list so that assert(my_list) throws an error?
+    # an assertion error. 0 is such. What string value is there? What can you put in a list so that assert my_list throws an error?
 
 
     #CORE
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     c = 3.14
 
     # Example:
-    # c is at least 3 -> assert(c >= 3) (successful) assert(c < 3) (fails)
+    # c is at least 3 -> assert c >= 3 (successful) assert c < 3 (fails)
 
     #Case A: c is strictly greater than 3
 

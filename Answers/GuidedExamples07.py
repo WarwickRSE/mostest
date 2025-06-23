@@ -28,18 +28,18 @@ def is_nth_power_of_int(val):
 def test_all_cases():
 
     # Really obvious cases
-    assert(is_nth_power_of_int(2**5))
-    assert( not is_nth_power_of_int(2.5**5))
+    assert is_nth_power_of_int(2**5)
+    assert not is_nth_power_of_int(2.5**5)
 
     # Zero is usually a good edge case
-    assert(is_nth_power_of_int(0))
+    assert is_nth_power_of_int(0)
 
     # Getting to large values
-    assert(is_nth_power_of_int(150**5))
-    assert(not is_nth_power_of_int((-1)**5))  # This one tripped up my first code attempt!
+    assert is_nth_power_of_int(150**5)
+    assert not is_nth_power_of_int((-1)**5)  # This one tripped up my first code attempt!
 
-    assert(not is_nth_power_of_int(150**5 + 0.1))
-    assert(not is_nth_power_of_int(150.01**5))
+    assert not is_nth_power_of_int(150**5 + 0.1)
+    assert not is_nth_power_of_int(150.01**5)
 
 
 # Actually answering the conjecture

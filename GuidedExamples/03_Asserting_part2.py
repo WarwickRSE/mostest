@@ -5,7 +5,7 @@ def myFunction():
 
     #What will this block of code do? Run it and find out!
     try:
-        assert(False) #Will cause an assertion error
+        assert False #Will cause an assertion error
     except Exception as e:
         # The statement above catches ANY sort of error and hands it to us in the variable 'e'
         print("An error occured: ", e)

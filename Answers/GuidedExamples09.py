@@ -10,20 +10,20 @@ from broken_examples import *
 
 def test_is_even():
     a = 2
-    assert( is_even(a) or is_even(a+1))
+    assert is_even(a) or is_even(a+1)
 
 def test_is_even2():
     a = 3
-    assert( is_even(a) or not is_even(a))
+    assert is_even(a) or not is_even(a)
 
 def test_is_even3():
     a = is_even(2)
-    assert(True)
+    assert True
 
 def test_add_frac():
     
     aa = add_fractions((1, 2), (1, 2))
-    assert( aa[0]/aa[1] == 1)
+    assert aa[0]/aa[1] == 1
 
 
 if __name__ == "__main__":

@@ -44,6 +44,19 @@ So in these "borderline" cases we have a few choices:
 Usually, one of those is the right one and the consequences, cost to user and
 likelihood of error say which to pick.
 
+### Do not normalise deviance
+
+Contrary to the previous one, we recommend against 'normalising deviance'. A common
+cause of serious accidents, this refers to making it 'normal' to ignore a warning or
+exceed a limit,
+making it more likely that a warning will be automatically dismissed in a case where it should
+be recognised, or a limit drift far beyond where it would ever be set in one go.
+
+If your code warns somebody every time a parameter is 'a little bit big'
+they will get used to ignoring and dismissing that warning. If your docs tell
+somebody "if you get X error, just turn up Y threshold" then they will be prone
+to keep on turning up the dial.
+
 ## Proper terms
 
 Here are some of the more formal ideas and terms used to discuss this sort of thing.
@@ -138,12 +151,25 @@ we pass a value and get a result, and we get the same result for the same inputs
 Side-effecting functions are harder - if they depend on any global state
 then we need to constrain this when running the test. Idempotent functions
 are somewhere in the middle - if they can be repeated with the same effects
-they can't depend on global state, or really modify it.
+they can't depend on global state, or really modify it. So we need
+to take some caution, but we don't need to carefully 'mock-up' a bunch
+of state.
 
+Moreover, functions which affect global state really ought to be tested under
+all possible global circumstances - and you can see how the number of combinations
+of that might rapidly multiply.
 
-When we're writing tests for code, especially if
+On the other hand, when we're writing tests for code, especially if
 we approach it from a true 'unit testing' angle, where
 we test every single function individually, it can look
-like we should be inserting tests for everything everywhere
-But no...
+like we should be inserting checks for everything everywhere.
+This is a mistake - not only will we be doing un-necessary work
+in cases where our checks all pass, we can accidentally make our
+code _too_ fault tolerant. Because, by definition, 'fault tolerant'
+code is tolerant to faults, our code can end up continuing in cases
+where it ought to have stopped.
 
+In some languages, we need to aggressively raise errors - in Python
+we can mostly just decline to catch them. So, for example,
+do not catch exceptions unless you can actually handle them,
+in the sense of fixing the problem and carrying on.

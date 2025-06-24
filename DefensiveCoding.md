@@ -25,7 +25,7 @@ nearly all cases a researcher would far prefer an error message than either
 a wrong answer, or a waste of time (and money if using cloud or shared resources,
 or if you pay for your own electricity).
 
-### Only Warn of the Unexpected
+### Warn, don't Fail, for the Unexpected
 
 Contrary to the previous idea though, is that sometimes it is
 better to _warn_ of an issue, but allow the code to carry on anyway.
@@ -33,7 +33,9 @@ Here we want to distinguish between "this code will certainly get
 a wrong answer in this case" and "this potentially violates some
 assumptions we have made, but may give a useful answer anyway".
 
-For an example of the latter, consider things like ...
+For an example of the latter, consider a function to do numeric
+integration. We probably want to set a limit on the steepness
+of a function, since we'll get very inaccurate
 
 So in these "borderline" cases we have a few choices:
 
@@ -99,11 +101,11 @@ re-entrant, but are less likely to be, and it has to be carefully proven.
 As an example, consider:
 
 ```
-def copy_list(lst1, lst2):
-    lst2 = copy.deepcopy(lst1)  # Makes a proper copy
-
 def set_list(lst):
-    lst = [1, 2, 3]
+    lst.clear()
+    lst.append(1)
+    lst.append(2)
+    lst.append(3)
 
 def append_to_list(lst):
     lst.append(1)
@@ -118,10 +120,10 @@ def show_list(lst):
 
 ```
 
-Of these, only the 4th one (new_list_with_append) is truly pure - has no side effects and doesn't change
-its arguments. The first three have side-effects but only local ones (they affect the arguments
-they are passed, and nothing else). copy_list, set_list and new_list_with_append are all idempotent:
-if we call them again with the same inputs we get no further modifications. The 5th one (show_list) I believe is not idempotent, but I think it might depend on the exact definition
+Of these, only the 3rd one (new_list_with_append) is truly pure - has no side effects and doesn't change
+its arguments. The first two have side-effects but only local ones (they affect the arguments
+they are passed, and nothing else). set_list and new_list_with_append are both idempotent:
+if we call them again with the same inputs we get no further modifications. The 4th one (show_list) I believe is not idempotent, but I think it might depend on the exact definition
 in use, and it definitely has side-effects.
 
 ### Pre and Post conditions and Invariants

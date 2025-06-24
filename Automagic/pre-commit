@@ -1,4 +1,4 @@
-
+#!/bin/bash
 echo "Running Tests"
 
 # I am using a venv - replace this bit with however you want to set-up your Python

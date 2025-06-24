@@ -1,8 +1,8 @@
 # Using a Github runner
 
 Github Free (at time of writing) gives us up to 2000 minutes of test
-running (on Ubuntu, on OSX it charges at 10 mins per minute).
-Warning: once you turn this on, you'll trigger the tests EVERY time to push to the repo, or edit a file in the web interface - this is the 'Continuous' part of continuous integration testing. You'll also get an email every time the tests fail.
+running (on Ubuntu, on OSX it charges at 10 mins per minute) in piblic repos.
+Warning: once you activate the runner from this example, you'll trigger the tests EVERY time you push to the repo main branch, or edit a file in the web interface - this is the 'Continuous' part of continuous integration testing. You'll also get an email every time the tests fail.
 
 While we're getting started, we recommend making a new repo. testing things locally and manually, and only then using the automated system, to avoid uselessly running down your budget.
 

@@ -41,3 +41,7 @@ You can add additional jobs, or you can add steps to the existing job.
 You can name the jobs, name the workflow etc
 
 The Github Marketplace has a bunch of pre-created flows for all sorts of things
+
+## Other useful notes
+
+By the way, to check your runner usage, go to 'Top right profile pic menu' -> Settings -> Billing and licensing -> usage

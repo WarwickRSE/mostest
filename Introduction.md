@@ -113,8 +113,7 @@ had to resort to using approximate equality.
 Most of the time, we're not worried about tiny errors. All we want is to be close enough, so we set a threshold for the answer. But suppose, rather than a sum, we have a complicated problem
 and have to use a calculated reference solution as the 'right' answer.
 
-Enter, telephone. Lets look at it from the side of the word ladder
-[ https://en.wikipedia.org/wiki/Word_ladder]
+Enter, telephone. Lets look at it from the side of the [word ladder](https://en.wikipedia.org/wiki/Word_ladder)
 
 ```
 head

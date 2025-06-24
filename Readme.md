@@ -2,7 +2,10 @@
 
 ## About this workshop
 
-....
+This workshop is an introduction to unit testing in Python, aimed at those with a mathematics
+or science background. It needs Python > 3.10 or so, some built-in libraries, and the PyTest library for the second part. The third part has two options: one needs a Github account and some [Actions credits](https://docs.github.com/en/billing/managing-billing-for-your-products/about-billing-for-github-actions) which at time of writing are included with GitHub Free.
+
+The Introductory 'speech' is summarised in Introduction.md
 
 ## How to use the code
 
@@ -47,11 +50,23 @@ that it is running correctly.
 - test_04_next_steps - from here you're on your own - the task is to write a test suite for the given code from scratch
 - \* test_05_pytest_features - a quick walkthrough of some of pyTests extra features
 
-### Python Constructs
+### Further Reading
 
-Some files describing some constructs that you might want to know more about, especially for the more 'advanced' parts. Dip into these if needed, or if the exercise points you to them.
+The folder Python constructs contains files describing some constructs that you might want to know more about, especially for the more 'advanced' parts. Dip into these if needed, or if the exercise points you to them.
 
-- PythonConstructs01_name - what does that \_\_name\_\_ idiom actually mean?
-- PythonConstructs02_TypesOfEquals - some details of how '==' and 'is' work, especially for non-basic types
-- PythonConstructs03_class - how to write and use your own simple class (useful for the PyTest section)
-- PythonConstructs04_with - what the 'with' construct means, and what it does
+- Name - what does that \_\_name\_\_ idiom actually mean?
+- IdentityVsEquality - some details of how '==' and 'is' work, especially for non-basic types
+- BindingParameters - more information on how we can create a function which calls another but with some parameters given pre-chosen values
+- Decorators - how to write your own Python decorator, and what they do
+- Class - how to write and use your own simple class (useful for the PyTest section)
+- With - what the 'with' construct means, and what it does
+
+A couple of other documents are also included in this repo.
+
+- UsefulTerms - a small glossary (extremely incomplete)
+- DefensiveProgramming - some notes on the idea of 'programming to avoid errors' and how this interacts with testing
+
+### Automatic Testing
+
+The third and final part of this workshop is about automatically running tests, and some guidance
+is in the Automagic folder.

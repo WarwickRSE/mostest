@@ -1,0 +1,20 @@
+
+echo "Running Tests"
+
+# I am using a venv - replace this bit with however you want to set-up your Python
+source ./env/bin/activate
+
+# This runs the tests
+pytest test.py
+
+# This checks the return code from the tests
+# If this entire script returns 0, the commit is allowed
+# If it returns anything else, it is aborted
+
+if [ $? -ne 0 ]; then
+  echo "Aborting due to test failures"
+  exit 1
+else
+  echo "Tests passed, doing commit"
+  exit 0
+fi

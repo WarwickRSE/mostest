@@ -1,138 +1,143 @@
-﻿2025-06-24T17:00:45.5570079Z Current runner version: '2.325.0'
-2025-06-24T17:00:45.5595148Z ##[group]Operating System
-2025-06-24T17:00:45.5596126Z Ubuntu
-2025-06-24T17:00:45.5596567Z 24.04.2
-2025-06-24T17:00:45.5597439Z LTS
-2025-06-24T17:00:45.5597898Z ##[endgroup]
-2025-06-24T17:00:45.5598404Z ##[group]Runner Image
-2025-06-24T17:00:45.5599034Z Image: ubuntu-24.04
-2025-06-24T17:00:45.5599648Z Version: 20250615.1.0
-2025-06-24T17:00:45.5600672Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250615.1/images/ubuntu/Ubuntu2404-Readme.md
-2025-06-24T17:00:45.5602412Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250615.1
-2025-06-24T17:00:45.5603319Z ##[endgroup]
-2025-06-24T17:00:45.5603788Z ##[group]Runner Image Provisioner
-2025-06-24T17:00:45.5604466Z 2.0.437.1
-2025-06-24T17:00:45.5604893Z ##[endgroup]
-2025-06-24T17:00:45.5605887Z ##[group]GITHUB_TOKEN Permissions
-2025-06-24T17:00:45.5608260Z Contents: read
-2025-06-24T17:00:45.5608818Z Metadata: read
-2025-06-24T17:00:45.5609537Z Packages: read
-2025-06-24T17:00:45.5610106Z ##[endgroup]
-2025-06-24T17:00:45.5613272Z Secret source: Actions
-2025-06-24T17:00:45.5614257Z Prepare workflow directory
-2025-06-24T17:00:45.5944011Z Prepare all required actions
-2025-06-24T17:00:45.5981391Z Getting action download info
-2025-06-24T17:00:46.0101966Z ##[group]Download immutable action package 'actions/checkout@v4'
-2025-06-24T17:00:46.0103023Z Version: 4.2.2
-2025-06-24T17:00:46.0104055Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
-2025-06-24T17:00:46.0105485Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
-2025-06-24T17:00:46.0106225Z ##[endgroup]
-2025-06-24T17:00:46.1622966Z Complete job name: build
-2025-06-24T17:00:46.2407636Z ##[group]Run actions/checkout@v4
-2025-06-24T17:00:46.2408546Z with:
-2025-06-24T17:00:46.2409018Z   repository: hratcliffe/miniature-broccoli
-2025-06-24T17:00:46.2409767Z   token: ***
-2025-06-24T17:00:46.2410165Z   ssh-strict: true
-2025-06-24T17:00:46.2410579Z   ssh-user: git
-2025-06-24T17:00:46.2411019Z   persist-credentials: true
-2025-06-24T17:00:46.2411502Z   clean: true
-2025-06-24T17:00:46.2411930Z   sparse-checkout-cone-mode: true
-2025-06-24T17:00:46.2412444Z   fetch-depth: 1
-2025-06-24T17:00:46.2412857Z   fetch-tags: false
-2025-06-24T17:00:46.2413279Z   show-progress: true
-2025-06-24T17:00:46.2413695Z   lfs: false
-2025-06-24T17:00:46.2414083Z   submodules: false
-2025-06-24T17:00:46.2414510Z   set-safe-directory: true
-2025-06-24T17:00:46.2415214Z ##[endgroup]
-2025-06-24T17:00:46.4124163Z Syncing repository: hratcliffe/miniature-broccoli
-2025-06-24T17:00:46.4126274Z ##[group]Getting Git version info
-2025-06-24T17:00:46.4127410Z Working directory is '/home/runner/work/miniature-broccoli/miniature-broccoli'
-2025-06-24T17:00:46.4128735Z [command]/usr/bin/git version
-2025-06-24T17:00:46.4170467Z git version 2.49.0
-2025-06-24T17:00:46.4198107Z ##[endgroup]
-2025-06-24T17:00:46.4220738Z Temporarily overriding HOME='/home/runner/work/_temp/3d35df5e-a8c4-4e95-b534-227020171bef' before making global git config changes
-2025-06-24T17:00:46.4222135Z Adding repository directory to the temporary git global config as a safe directory
-2025-06-24T17:00:46.4227659Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/miniature-broccoli/miniature-broccoli
-2025-06-24T17:00:46.4261225Z Deleting the contents of '/home/runner/work/miniature-broccoli/miniature-broccoli'
-2025-06-24T17:00:46.4265004Z ##[group]Initializing the repository
-2025-06-24T17:00:46.4270156Z [command]/usr/bin/git init /home/runner/work/miniature-broccoli/miniature-broccoli
-2025-06-24T17:00:46.4324822Z hint: Using 'master' as the name for the initial branch. This default branch name
-2025-06-24T17:00:46.4326537Z hint: is subject to change. To configure the initial branch name to use in all
-2025-06-24T17:00:46.4328270Z hint: of your new repositories, which will suppress this warning, call:
-2025-06-24T17:00:46.4329393Z hint:
-2025-06-24T17:00:46.4330108Z hint: 	git config --global init.defaultBranch <name>
-2025-06-24T17:00:46.4331292Z hint:
-2025-06-24T17:00:46.4331830Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2025-06-24T17:00:46.4332677Z hint: 'development'. The just-created branch can be renamed via this command:
-2025-06-24T17:00:46.4333330Z hint:
-2025-06-24T17:00:46.4333693Z hint: 	git branch -m <name>
-2025-06-24T17:00:46.4334510Z Initialized empty Git repository in /home/runner/work/miniature-broccoli/miniature-broccoli/.git/
-2025-06-24T17:00:46.4341462Z [command]/usr/bin/git remote add origin https://github.com/hratcliffe/miniature-broccoli
-2025-06-24T17:00:46.4374955Z ##[endgroup]
-2025-06-24T17:00:46.4375823Z ##[group]Disabling automatic garbage collection
-2025-06-24T17:00:46.4379235Z [command]/usr/bin/git config --local gc.auto 0
-2025-06-24T17:00:46.4407875Z ##[endgroup]
-2025-06-24T17:00:46.4408892Z ##[group]Setting up auth
-2025-06-24T17:00:46.4414263Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-06-24T17:00:46.4443688Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-06-24T17:00:46.4711322Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-06-24T17:00:46.4742243Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-06-24T17:00:46.4965061Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2025-06-24T17:00:46.5009403Z ##[endgroup]
-2025-06-24T17:00:46.5010807Z ##[group]Fetching the repository
-2025-06-24T17:00:46.5018183Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fc3da1278ef2397c8781364776d8c4e93ff221e8:refs/remotes/origin/main
-2025-06-24T17:00:46.9036856Z From https://github.com/hratcliffe/miniature-broccoli
-2025-06-24T17:00:46.9038017Z  * [new ref]         fc3da1278ef2397c8781364776d8c4e93ff221e8 -> origin/main
-2025-06-24T17:00:46.9063165Z ##[endgroup]
-2025-06-24T17:00:46.9063987Z ##[group]Determining the checkout info
-2025-06-24T17:00:46.9065378Z ##[endgroup]
-2025-06-24T17:00:46.9071167Z [command]/usr/bin/git sparse-checkout disable
-2025-06-24T17:00:46.9111237Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-2025-06-24T17:00:46.9139047Z ##[group]Checking out the ref
-2025-06-24T17:00:46.9143589Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-2025-06-24T17:00:46.9185036Z Switched to a new branch 'main'
-2025-06-24T17:00:46.9187943Z branch 'main' set up to track 'origin/main'.
-2025-06-24T17:00:46.9193606Z ##[endgroup]
-2025-06-24T17:00:46.9228004Z [command]/usr/bin/git log -1 --format=%H
-2025-06-24T17:00:46.9250129Z fc3da1278ef2397c8781364776d8c4e93ff221e8
-2025-06-24T17:00:46.9437852Z ##[group]Run pip install pytest
-2025-06-24T17:00:46.9438451Z [36;1mpip install pytest[0m
-2025-06-24T17:00:46.9438911Z [36;1mpytest test.py[0m
-2025-06-24T17:00:46.9526416Z shell: /usr/bin/bash -e {0}
-2025-06-24T17:00:46.9527052Z ##[endgroup]
-2025-06-24T17:00:47.3106659Z Defaulting to user installation because normal site-packages is not writeable
-2025-06-24T17:00:47.7328964Z Collecting pytest
-2025-06-24T17:00:47.7997462Z   Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
-2025-06-24T17:00:47.8350414Z Collecting iniconfig>=1 (from pytest)
-2025-06-24T17:00:47.8495015Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
-2025-06-24T17:00:47.8537417Z Requirement already satisfied: packaging>=20 in /usr/lib/python3/dist-packages (from pytest) (24.0)
-2025-06-24T17:00:47.8833222Z Collecting pluggy<2,>=1.5 (from pytest)
-2025-06-24T17:00:47.8974104Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
-2025-06-24T17:00:47.9020907Z Requirement already satisfied: pygments>=2.7.2 in /usr/lib/python3/dist-packages (from pytest) (2.17.2)
-2025-06-24T17:00:47.9233070Z Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
-2025-06-24T17:00:47.9676882Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.5/365.5 kB 8.6 MB/s eta 0:00:00
-2025-06-24T17:00:47.9813559Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
-2025-06-24T17:00:47.9975338Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
-2025-06-24T17:00:48.2525601Z Installing collected packages: pluggy, iniconfig, pytest
-2025-06-24T17:00:48.4834646Z Successfully installed iniconfig-2.1.0 pluggy-1.6.0 pytest-8.4.1
-2025-06-24T17:00:48.7402068Z ============================= test session starts ==============================
-2025-06-24T17:00:48.7403107Z platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
-2025-06-24T17:00:48.7404022Z rootdir: /home/runner/work/miniature-broccoli/miniature-broccoli
-2025-06-24T17:00:48.7404741Z collected 7 items
-2025-06-24T17:00:48.7405063Z 
-2025-06-24T17:00:48.7629145Z test.py .......                                                          [100%]
-2025-06-24T17:00:48.7630009Z 
-2025-06-24T17:00:48.7630453Z ============================== 7 passed in 0.02s ===============================
-2025-06-24T17:00:48.7902926Z Post job cleanup.
-2025-06-24T17:00:48.8831546Z [command]/usr/bin/git version
-2025-06-24T17:00:48.8867354Z git version 2.49.0
-2025-06-24T17:00:48.8910836Z Temporarily overriding HOME='/home/runner/work/_temp/62bfa333-9d72-496f-a792-4eba19957a3a' before making global git config changes
-2025-06-24T17:00:48.8912169Z Adding repository directory to the temporary git global config as a safe directory
-2025-06-24T17:00:48.8917797Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/miniature-broccoli/miniature-broccoli
-2025-06-24T17:00:48.8953233Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-06-24T17:00:48.8986053Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-06-24T17:00:48.9212005Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-06-24T17:00:48.9232373Z http.https://github.com/.extraheader
-2025-06-24T17:00:48.9244658Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2025-06-24T17:00:48.9273749Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-06-24T17:00:48.9592922Z Cleaning up orphan processes
+﻿2025-06-24T19:30:24.9300125Z Current runner version: '2.325.0'
+2025-06-24T19:30:24.9326694Z ##[group]Operating System
+2025-06-24T19:30:24.9327501Z Ubuntu
+2025-06-24T19:30:24.9328063Z 24.04.2
+2025-06-24T19:30:24.9328545Z LTS
+2025-06-24T19:30:24.9328984Z ##[endgroup]
+2025-06-24T19:30:24.9329560Z ##[group]Runner Image
+2025-06-24T19:30:24.9330183Z Image: ubuntu-24.04
+2025-06-24T19:30:24.9330711Z Version: 20250622.1.0
+2025-06-24T19:30:24.9331760Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250622.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-24T19:30:24.9333164Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250622.1
+2025-06-24T19:30:24.9334195Z ##[endgroup]
+2025-06-24T19:30:24.9335187Z ##[group]Runner Image Provisioner
+2025-06-24T19:30:24.9335851Z 2.0.437.1
+2025-06-24T19:30:24.9336278Z ##[endgroup]
+2025-06-24T19:30:24.9337402Z ##[group]GITHUB_TOKEN Permissions
+2025-06-24T19:30:24.9339312Z Contents: read
+2025-06-24T19:30:24.9339854Z Metadata: read
+2025-06-24T19:30:24.9340652Z Packages: read
+2025-06-24T19:30:24.9341196Z ##[endgroup]
+2025-06-24T19:30:24.9343365Z Secret source: Actions
+2025-06-24T19:30:24.9344031Z Prepare workflow directory
+2025-06-24T19:30:24.9737965Z Prepare all required actions
+2025-06-24T19:30:24.9776554Z Getting action download info
+2025-06-24T19:30:25.3381173Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-06-24T19:30:25.3382337Z Version: 4.2.2
+2025-06-24T19:30:25.3383303Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-06-24T19:30:25.3384619Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-06-24T19:30:25.3385452Z ##[endgroup]
+2025-06-24T19:30:25.4908428Z Complete job name: run-tests
+2025-06-24T19:30:25.5710615Z ##[group]Run actions/checkout@v4
+2025-06-24T19:30:25.5711474Z with:
+2025-06-24T19:30:25.5711912Z   repository: hratcliffe/miniature-broccoli
+2025-06-24T19:30:25.5712631Z   token: ***
+2025-06-24T19:30:25.5713022Z   ssh-strict: true
+2025-06-24T19:30:25.5713416Z   ssh-user: git
+2025-06-24T19:30:25.5713836Z   persist-credentials: true
+2025-06-24T19:30:25.5714286Z   clean: true
+2025-06-24T19:30:25.5714909Z   sparse-checkout-cone-mode: true
+2025-06-24T19:30:25.5715407Z   fetch-depth: 1
+2025-06-24T19:30:25.5715827Z   fetch-tags: false
+2025-06-24T19:30:25.5716235Z   show-progress: true
+2025-06-24T19:30:25.5716638Z   lfs: false
+2025-06-24T19:30:25.5717008Z   submodules: false
+2025-06-24T19:30:25.5717412Z   set-safe-directory: true
+2025-06-24T19:30:25.5718121Z ##[endgroup]
+2025-06-24T19:30:25.7597504Z Syncing repository: hratcliffe/miniature-broccoli
+2025-06-24T19:30:25.7600601Z ##[group]Getting Git version info
+2025-06-24T19:30:25.7602109Z Working directory is '/home/runner/work/miniature-broccoli/miniature-broccoli'
+2025-06-24T19:30:25.7604157Z [command]/usr/bin/git version
+2025-06-24T19:30:25.7644794Z git version 2.49.0
+2025-06-24T19:30:25.7673789Z ##[endgroup]
+2025-06-24T19:30:25.7698723Z Temporarily overriding HOME='/home/runner/work/_temp/015d6ee5-5946-454c-bc8f-a6bf9791a873' before making global git config changes
+2025-06-24T19:30:25.7702552Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-24T19:30:25.7706565Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/miniature-broccoli/miniature-broccoli
+2025-06-24T19:30:25.7744252Z Deleting the contents of '/home/runner/work/miniature-broccoli/miniature-broccoli'
+2025-06-24T19:30:25.7748024Z ##[group]Initializing the repository
+2025-06-24T19:30:25.7753991Z [command]/usr/bin/git init /home/runner/work/miniature-broccoli/miniature-broccoli
+2025-06-24T19:30:25.7829353Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-24T19:30:25.7831332Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-24T19:30:25.7833879Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-24T19:30:25.7836480Z hint:
+2025-06-24T19:30:25.7838014Z hint: 	git config --global init.defaultBranch <name>
+2025-06-24T19:30:25.7840366Z hint:
+2025-06-24T19:30:25.7842207Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-24T19:30:25.7845493Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-24T19:30:25.7848174Z hint:
+2025-06-24T19:30:25.7849451Z hint: 	git branch -m <name>
+2025-06-24T19:30:25.7852400Z Initialized empty Git repository in /home/runner/work/miniature-broccoli/miniature-broccoli/.git/
+2025-06-24T19:30:25.7857785Z [command]/usr/bin/git remote add origin https://github.com/hratcliffe/miniature-broccoli
+2025-06-24T19:30:25.7886364Z ##[endgroup]
+2025-06-24T19:30:25.7888893Z ##[group]Disabling automatic garbage collection
+2025-06-24T19:30:25.7891197Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-24T19:30:25.7922163Z ##[endgroup]
+2025-06-24T19:30:25.7923597Z ##[group]Setting up auth
+2025-06-24T19:30:25.7929239Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-24T19:30:25.7965220Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-24T19:30:25.8253899Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-24T19:30:25.8285556Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-24T19:30:25.8512718Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-24T19:30:25.8557583Z ##[endgroup]
+2025-06-24T19:30:25.8566408Z ##[group]Fetching the repository
+2025-06-24T19:30:25.8570252Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4a6cfd149130a4e0740ae26273403dac442b95e2:refs/remotes/origin/main
+2025-06-24T19:30:26.3270115Z From https://github.com/hratcliffe/miniature-broccoli
+2025-06-24T19:30:26.3272290Z  * [new ref]         4a6cfd149130a4e0740ae26273403dac442b95e2 -> origin/main
+2025-06-24T19:30:26.3299015Z ##[endgroup]
+2025-06-24T19:30:26.3301034Z ##[group]Determining the checkout info
+2025-06-24T19:30:26.3303174Z ##[endgroup]
+2025-06-24T19:30:26.3304997Z [command]/usr/bin/git sparse-checkout disable
+2025-06-24T19:30:26.3351501Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-06-24T19:30:26.3380289Z ##[group]Checking out the ref
+2025-06-24T19:30:26.3383562Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-06-24T19:30:26.3425949Z Switched to a new branch 'main'
+2025-06-24T19:30:26.3428443Z branch 'main' set up to track 'origin/main'.
+2025-06-24T19:30:26.3435647Z ##[endgroup]
+2025-06-24T19:30:26.3470914Z [command]/usr/bin/git log -1 --format=%H
+2025-06-24T19:30:26.3495434Z 4a6cfd149130a4e0740ae26273403dac442b95e2
+2025-06-24T19:30:26.3711796Z ##[group]Run echo "Hello world"
+2025-06-24T19:30:26.3712876Z [36;1mecho "Hello world"[0m
+2025-06-24T19:30:26.3813884Z shell: /usr/bin/bash -e {0}
+2025-06-24T19:30:26.3815047Z ##[endgroup]
+2025-06-24T19:30:26.3927073Z Hello world
+2025-06-24T19:30:26.3990714Z ##[group]Run pip install pytest
+2025-06-24T19:30:26.3991753Z [36;1mpip install pytest[0m
+2025-06-24T19:30:26.3992650Z [36;1mpytest test.py[0m
+2025-06-24T19:30:26.4053295Z shell: /usr/bin/bash -e {0}
+2025-06-24T19:30:26.4054181Z ##[endgroup]
+2025-06-24T19:30:26.8173550Z Defaulting to user installation because normal site-packages is not writeable
+2025-06-24T19:30:27.2374751Z Collecting pytest
+2025-06-24T19:30:27.3073978Z   Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+2025-06-24T19:30:27.3395653Z Collecting iniconfig>=1 (from pytest)
+2025-06-24T19:30:27.3495529Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-06-24T19:30:27.3541546Z Requirement already satisfied: packaging>=20 in /usr/lib/python3/dist-packages (from pytest) (24.0)
+2025-06-24T19:30:27.3808695Z Collecting pluggy<2,>=1.5 (from pytest)
+2025-06-24T19:30:27.3910175Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2025-06-24T19:30:27.3962598Z Requirement already satisfied: pygments>=2.7.2 in /usr/lib/python3/dist-packages (from pytest) (2.17.2)
+2025-06-24T19:30:27.4133399Z Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+2025-06-24T19:30:27.4496622Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.5/365.5 kB 11.2 MB/s eta 0:00:00
+2025-06-24T19:30:27.4597139Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+2025-06-24T19:30:27.4722476Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2025-06-24T19:30:27.7403371Z Installing collected packages: pluggy, iniconfig, pytest
+2025-06-24T19:30:27.9754133Z Successfully installed iniconfig-2.1.0 pluggy-1.6.0 pytest-8.4.1
+2025-06-24T19:30:28.2777632Z ============================= test session starts ==============================
+2025-06-24T19:30:28.2778705Z platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+2025-06-24T19:30:28.2779679Z rootdir: /home/runner/work/miniature-broccoli/miniature-broccoli
+2025-06-24T19:30:28.2780416Z collected 7 items
+2025-06-24T19:30:28.2780700Z 
+2025-06-24T19:30:28.3049237Z test.py .......                                                          [100%]
+2025-06-24T19:30:28.3049795Z 
+2025-06-24T19:30:28.3050042Z ============================== 7 passed in 0.02s ===============================
+2025-06-24T19:30:28.3338531Z Post job cleanup.
+2025-06-24T19:30:28.4271629Z [command]/usr/bin/git version
+2025-06-24T19:30:28.4312301Z git version 2.49.0
+2025-06-24T19:30:28.4356414Z Temporarily overriding HOME='/home/runner/work/_temp/cff9b4c1-4e23-4a74-ad83-3776e1b78341' before making global git config changes
+2025-06-24T19:30:28.4357366Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-24T19:30:28.4370363Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/miniature-broccoli/miniature-broccoli
+2025-06-24T19:30:28.4405970Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-24T19:30:28.4438639Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-24T19:30:28.4671039Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-24T19:30:28.4693226Z http.https://github.com/.extraheader
+2025-06-24T19:30:28.4706810Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-06-24T19:30:28.4737811Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-24T19:30:28.5074018Z Cleaning up orphan processes

@@ -1,5 +1,5 @@
-# This code 'checks' the Monty Hall problem (see wikipedia for details)
-# Given 3 doors, two containing goats and one a car, a contestant chooses a one. 
+# This code simulates the Monty Hall problem (see wikipedia for details)
+# Given 3 doors, two containing goats and one a car, a contestant chooses one. 
 # The host now reveals a goat (important - thereby introducing new information)
 # Is the contestant better to stick with their first choice or swap to the other option?
 
@@ -7,9 +7,12 @@
 # 2 doors - the one the contestant originally picked, and one other, with one of these two
 # guaranteed to be the prize
 
-#We're going to generate a bunch of random setups, random reveals and calculate the probability of winning
+# TEST DATA:
+# For the case of 3 doors, the odds are 66.6 % to win by swapping and 33.3 by sticking
+# In fact, for any number of doors, it's 100/N % to win by sticking and 100 * (1-1/N) by swapping
 
 import random
+from datetime import datetime
 
 def random_pick(n):
     """Pick a random item from 1 to N"""
@@ -31,6 +34,18 @@ def contestant_pick(doors):
     #Note: function takes doors list not its length in case we wanted
     # more sophisticated picking. Sig. matches host_pick too which helps clarity
     return random_pick(len(doors))
+
+def uncle_ruperts_pick(doors):
+    """ Since there is no magic strategy, we've simulated Uncle Rupert by taking the middle door, unless the current clock seconds are between 0 and 30, when we take the first. This is as sane as anything and almost COMPLETELY untestable!!! Have fun """
+    # See PyTestExamples/test_04 for who Rupert is...
+
+
+    now = datetime.now()
+    if now.second < 30:
+        return 1
+    else:
+        return len(doors)/2
+
 
 def host_pick(doors, contestant_pick):
     """Pick all but 2 doors from the given list - one will be the contestant's pick, and the two will definitely contain the prize door"""
@@ -65,34 +80,42 @@ def host_pick(doors, contestant_pick):
     reveals = [i for i in range(1, n+1) if i != choice and i != contestant_pick]
     return reveals
 
-def run_trial(n_doors, swap):
+def swap_selection(doors, reveals, cp):
+    # Swap contestant's selection from what it is to whichever other they are offered
+    # Find whichever door is not already chosen, or selected by the host
+
+    available_doors = range(1, len(doors)+1) # Start with all possible door indices
+    # Account for host having revealed possibly more than 1
+    new = [i for i in available_doors if i not in reveals and i != cp] 
+    assert len(new) == 1, "Host did not reveal enough doors!"
+    return new[0]
+
+def run_trial(n_doors, swap, use_strategy):
     """Run a single realisation of the game with n_doors doors, and contestant strategy swap = True or False"""
 
     # Better verify we have at least 3 doors
-    assert(n_doors >= 3)
+    assert n_doors >= 3
 
     # Swap is whether the contestant will decide to swap doors
 
     doors = generate_door_layout(n_doors)
-    cp = contestant_pick(doors)
+    if use_strategy:
+        cp = uncle_ruperts_pick(doors)
+    else:
+        cp = contestant_pick(doors)
     hp = host_pick(doors, cp)
 
     if swap:
-        # Find whichever door is not already chosen, or selected by the host
-        available_doors = range(1, n_doors+1) # Start with all possible door indices
-        # Account for host having revealed possibly more than 1
-        new = [i for i in available_doors if i not in hp and i != cp] 
-        assert len(new) == 1, "Host did not reveal enough doors!"
-        cp = new[0]
+        cp = swap_selection(doors, hp, cp)
 
     return doors[cp-1]
 
-def run_sim(trials, n_doors, swap):
+def run_sim(trials, n_doors, swap, use_strategy = False):
     """Run 'trials' iterations of the game, with the given number of doors and contestant strategy"""
 
     wins = 0
     for i in range(trials):
-      win = run_trial(n_doors, swap)
+      win = run_trial(n_doors, swap, use_strategy)
       if win: wins = wins + 1
     return wins
 

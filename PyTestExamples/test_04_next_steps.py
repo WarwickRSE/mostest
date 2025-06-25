@@ -7,7 +7,7 @@
 #Otherwise we have provided a testable piece of code to investigate the following:
 
 # My Great Uncle Rupert once lost his prized flat-cap in a Poker game against
-# a game-show host, a professor of mathematics and an insurance adjuster, and
+# a game-show host, a professor of mathematics and a financial advisor, and
 # lost his trust for all three.
 # Ever since, he has insisted that he has a strategy for the Monty-Hall game
 # which wins >50 % of the time _without_ listening to that darn host!

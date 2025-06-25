@@ -2,6 +2,8 @@ import pytest
 from TestableCode_idea_MontyHall import *
 
 from math import floor
+import os
+from uuid import uuid1
 
 # ----------- Testing random pick ------------------------------
 
@@ -180,12 +182,48 @@ def test_sim(nt, nd):
     assert wins == pytest.approx(expected, 2) # Allow ± 2?
 
 # --------- Test read_input_file -----------
-# TBC
+# NOTE: we didn't provide good an bad input files, but sometimes testing does need them
+# However our file reading code here is pretty poor, so it's not going to pass many
+# good tests
+
+# Here's some tests which reveal just how bad this code is!
+@pytest.mark.skip(reason="These Fail in the code as written")
+def test_reader1():
+    read_input_file("FileThatDoesNotExist.xyz")
+
+def test_reader2():
+    # Creating a bad file on-the-fly
+    filename = 'file_'+str(uuid1())
+    with open(filename, 'w') as file:
+        file.write("nt=abc")
+    
+    # Reader silently ignores the bad line....
+    read_input_file(filename)
+    # Delete our temporary file
+    os.remove(filename)
+
 
 # ---------- Test report_wins ----------
 # This is maybe a bit pointless, but it shows HOW we can do this
 
-# TBC
+def test_reporting(capsys):
+
+    wins = 10
+    trials = 100
+    doors = 3
+
+    report_wins(wins, trials, doors, False)
+
+    captured = capsys.readouterr()
+    # NOTE: using the same format statement amounts to 'doing the same thing'
+    # So we insert here the entire report
+    # This is NOT usually the right thing to do unless the format
+    # of the report is vital!
+    caps = str(captured.out).split('\n')
+    assert "Ran 100 trials with 3 doors" in caps
+    assert "Won 90 of 100 times (90.0 %) by swapping" in caps
+    assert "Won 10 of 100 times (10.0 %) by sticking" in caps
+
 
 # Testing the whole dealy-whack
 # Final Stretch! Now we just have to write the test to tell Uncle Rupert

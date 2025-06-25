@@ -23,7 +23,9 @@
 # the case that we should add every check we might think of. See DefensiveCoding for some
 # notes on why not. 
 
-#We don't have model solutions for this section - we have some hints, and we
-# can give you feedback - just ask!
+# We have produces our own test suite for this, but this is just an example
+# It's in Answers/PyTest04.py but it is just OUR version. Your's is likely
+# different and that's fine. 
+# We can give you feedback - just ask!
 
 #YOUR TESTS HERE

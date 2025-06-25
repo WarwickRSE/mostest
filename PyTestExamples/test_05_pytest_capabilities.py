@@ -80,3 +80,10 @@ def test_which_prints(capsys):
     captured = capsys.readouterr()
     assert "Hello" in captured.out
 
+# We can run tests with parameters, although we need some way of creating the parameters. A simple case is one where we want to run a test for numbers from 0 to 5:
+@pytest.mark.parametrize('val', range(5))
+def test_with_params(val):
+    assert val < 5
+
+# You can see that this will be run with the values 0...4 using the 'dry-run command'
+#  pytest --co test_05_pytest_capabilities.py

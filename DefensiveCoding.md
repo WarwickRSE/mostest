@@ -35,7 +35,7 @@ assumptions we have made, but may give a useful answer anyway".
 
 For an example of the latter, consider a function to do numeric
 integration. We probably want to set a limit on the steepness
-of a function, since we'll get very inaccurate
+of a function, since we'll get very inaccurate results for rapid changes.
 
 So in these "borderline" cases we have a few choices:
 
@@ -58,6 +58,8 @@ If your code warns somebody every time a parameter is 'a little bit big'
 they will get used to ignoring and dismissing that warning. If your docs tell
 somebody "if you get X error, just turn up Y threshold" then they will be prone
 to keep on turning up the dial.
+
+Distinguish between Errors, Warnings and just plain Info, and present things to 'your user' with an appropriate label, and you'll help to mitigate this.
 
 ## Proper terms
 
@@ -126,6 +128,15 @@ they are passed, and nothing else). set_list and new_list_with_append are both i
 if we call them again with the same inputs we get no further modifications. The 4th one (show_list) I believe is not idempotent, but I think it might depend on the exact definition
 in use, and it definitely has side-effects.
 
+By the way, the following function does not end up having side effects because of the details of how Python lists work (we re-assign the name, rather than act on the data):
+
+```
+def try_to_set(lst):
+    lst = [1, 2, 3]
+lst = []
+try_to_set(lst)
+```
+
 ### Pre and Post conditions and Invariants
 
 Most checks we might put into our functions fall into one of three categories:
@@ -139,7 +150,7 @@ to meet the post-conditions as long as you, the caller, meet the pre-conditions.
 but functions are expected to maintain them.
 
 These ideas are almost certainly familiar, if not the words. Preconditions are what you
-put in your docs (do you write docs, right?) about the values a function expects to be given.
+put in your docs (you do write docs, right?) about the values (and in Python the types) a function expects to be given.
 Postconditions are the things your function promises to do. An example of an invariant can be
 as simple as "this class representing absolute Temperature guarantees to always have a value greater
 than or equal to 0", or "this class representing a fraction will always be in its simplest terms".
@@ -175,3 +186,10 @@ In some languages, we need to aggressively raise errors - in Python
 we can mostly just decline to catch them. So, for example,
 do not catch exceptions unless you can actually handle them,
 in the sense of fixing the problem and carrying on.
+
+Finally, all that stuff about pre/post conditions are invariants are
+the keys to writing your tests. You set up something that meets the pre-conditions
+and then verify the post-conditions. Sometimes you also set-up something
+that violates the pre-conditions and verify that an error is raised (if it is meant to be).
+Finally, invariants can be a great source of those 'alternate angles' for testing: while they often wont cover the details, verifying
+an invariant is a good 'sanity check' on a function.

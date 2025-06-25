@@ -48,7 +48,7 @@ that it is running correctly.
 - test_02_selecting - how to run only a specific function (for quick hacky tests)
 - test_03_test_file - separating tests from code, and putting the tests we wrote before into the suite
 - test_04_next_steps - from here you're on your own - the task is to write a test suite for the given code from scratch
-- \* test_05_pytest_features - a quick walkthrough of some of pyTests extra features
+- \* test_05_pytest_capabilities - a quick walkthrough of some of pyTest's extra features
 
 ### Further Reading
 

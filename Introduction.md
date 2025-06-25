@@ -38,7 +38,7 @@ To do this, we put together several pieces.
 - We use Unit testing (testing individual functions) to check all the little pieces work - that they do what they promise on known inputs.
 - We cover as much of the domain as we can - checking big, small and zero numbers, checking big files, checking names with accents, all the inputs we can imagine.
 - We use additional properties to cross-check our functions, such as invariants, or properties that the results should have regardless of how we obtained them
-- Once we're confident in our functions, we put them together and try and verify that the correct bricks are making the correct building (Integration Testing)
+- Once we're confident in our functions, we put them together and try and verify that the correct bricks are making the correct building (Integration Testing, End-to-end Testing)
 - Especially in the sciences and applied maths, we can use model solutions, and check our code works for a case with known answers
 - Lastly, we protect our future by recording known issues, and adding checks for them (Regression Testing)
 

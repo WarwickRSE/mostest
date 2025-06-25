@@ -5,7 +5,7 @@
 This workshop is an introduction to unit testing in Python, aimed at those with a mathematics
 or science background. It needs Python > 3.10 or so, some built-in libraries, and the PyTest library for the second part. The third part has two options: one needs a Github account and some [Actions credits](https://docs.github.com/en/billing/managing-billing-for-your-products/about-billing-for-github-actions) which at time of writing are included with GitHub Free.
 
-The Introductory 'speech' is summarised in Introduction.md
+The Introductory 'speech' is summarized in Introduction.md
 
 ## How to use the code
 

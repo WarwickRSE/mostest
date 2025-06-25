@@ -97,7 +97,7 @@ we do it, the end state is the same.
 Re-entrancy is not directly related to these, but the concepts overlap.
 A re-entrant function is one which can be stopped, and then started again (from the beginning)
 and still succeed. Pure functions are by definition re-entrant - they don't affect any
-internal or external state, so we can interupt them without issue. Side-effecting functions _can_ be
+internal or external state, so we can interrupt them without issue. Side-effecting functions _can_ be
 re-entrant, but are less likely to be, and it has to be carefully proven.
 
 As an example, consider:

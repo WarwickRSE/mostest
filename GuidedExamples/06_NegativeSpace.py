@@ -28,7 +28,7 @@ if __name__ == "__main__":
     #But we haven't really considered testing the 'bad' cases - verifying that our code
     # correctly fails or rejects bad values.
 
-    #We're going to look at a few 'mechanical' checks first, then we'll revist the newton_raphson code in a 'defensive' form
+    #We're going to look at a few 'mechanical' checks first, then we'll revisit the newton_raphson code in a 'defensive' form
 
     # 'Negative space' in art is when you draw an object by shading everywhere it is not.
     # Negative space testing is a lovely picturesque description of the idea of testing the things
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     except Exception as e:
         print("Test failed successfully with ERROR: ", e)
     else:
-        print("OOOPS! Are you SURE that's physically meaniningful?")
+        print("OOOPS! Are you SURE that's physically meaningful?")
 
     #So in this case, our function as written does something meaningless. We'd really rather catch that! So can you go fix the function to raise its own error (instead of relying on sqrt to do it?)
 

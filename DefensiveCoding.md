@@ -46,13 +46,13 @@ So in these "borderline" cases we have a few choices:
 Usually, one of those is the right one and the consequences, cost to user and
 likelihood of error say which to pick.
 
-### Do not normalise deviance
+### Do not normalize deviance
 
-Contrary to the previous one, we recommend against 'normalising deviance'. A common
+Contrary to the previous one, we recommend against 'normalizing deviance'. A common
 cause of serious accidents, this refers to making it 'normal' to ignore a warning or
 exceed a limit,
 making it more likely that a warning will be automatically dismissed in a case where it should
-be recognised, or a limit drift far beyond where it would ever be set in one go.
+be recognized, or a limit drift far beyond where it would ever be set in one go.
 
 If your code warns somebody every time a parameter is 'a little bit big'
 they will get used to ignoring and dismissing that warning. If your docs tell

@@ -86,3 +86,4 @@ if __name__ == "__main__":
     # Every check costs time, and it is not always clear how 'defensive' our functions should be
     # Do not take this example as an exhortation to add every check you can think of into every function!
     # Aim to strike a balance between explicit checks, clear code, and performance!!
+    # The file DefensiveCoding.md has some more thoughts on this

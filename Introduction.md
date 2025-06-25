@@ -30,7 +30,7 @@ our code is correct, and we can't even rely on our tests to be correct either. B
 
 The perfect is the enemy of the good here. Just because testing can't do everything we might
 want, doesn't mean it can't do anything. We just have to cover as many angles as we can,
-while recognising that this _improves_ our confidence, and reduces the space for error,
+while recognizing that this _improves_ our confidence, and reduces the space for error,
 without eliminating the possibility for wrong answers or mistakes.
 
 To do this, we put together several pieces.
@@ -41,6 +41,12 @@ To do this, we put together several pieces.
 - Once we're confident in our functions, we put them together and try and verify that the correct bricks are making the correct building (Integration Testing, End-to-end Testing)
 - Especially in the sciences and applied maths, we can use model solutions, and check our code works for a case with known answers
 - Lastly, we protect our future by recording known issues, and adding checks for them (Regression Testing)
+
+NOTE: testing like this probably wont catch the case where you have
+a perfectly correct piece of software, and then apply it to the wrong
+problem. Like with the Hubble Space telescope (dubbed "The most precise
+error in history") you can extremely precisely do the wrong thing. In other words
+testing proves the software correct, not the answer.
 
 ## Floating Point Mathematics
 
@@ -69,7 +75,7 @@ Now we use way, way more than 3dp in anything we do. BUT this is still happening
 
 ## Example: reproducible sums
 
-Suppose we have a list of numbers. Lets do 0 to 1 in 1000 increments, i.e. 0, 0.001, 0.002 up to 1.0
+Suppose we have a list of numbers. Let's try to compute the sum of all the numbers from 0 to 1 split in 1000 increments, i.e. 0.001, 0.002 up to 1.0
 We know the answer we expect for integers: it's n * (n+1) / 2. We're dividing by n throughout, so it's just (n+1)/2. For n = 1000, we expect 500.5
 
 Generating this list and summing it gets a very close answer, on my machine good to

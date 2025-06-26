@@ -28,4 +28,9 @@
 # different and that's fine. 
 # We can give you feedback - just ask!
 
+# Lastly, you may want to look at test_05_pytest_capabilities and/or the pytest docs
+# for how to implement the things you would like to test. For example,
+# checking an exception is thrown as expected, running a test with specific values,
+# or looking at what gets printed when a function runs.
+
 #YOUR TESTS HERE

@@ -22,3 +22,14 @@ About 1 hour for Part 1, going through Guided examples
 About 1 hour for Part 2, going through PyTest
     A big chunk of this is section 4, writing tests for real code. The MontyHall problem is used as its familiar and illustrates some real problems
 About 15 mins for a basic Demo of Part 3, hooks or actions
+
+Instructions to Attendees:
+
+Examples are meant to be self-guided-walk-throughs. Can be run in Python, opened in IDE, pasted
+into a notebook or whatever desired. Although for pyTest, recommend Command Line
+
+The idea is to start at 'ENTRY POINT' and read through the files, running them occasionally, filling in where indicated etc
+
+Set timings for when the next sections will start after tackling the intro.
+Part 3 can be skipped if exercises need more time. Suggest doing this as just a 
+quick demo if Cohort are not already comfy with Github

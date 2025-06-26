@@ -11,12 +11,12 @@ def velocity_from_kinetic_energy(ke, mass):
 def ordinal_number(num):
     """ Ordinal numbers are like 1st, 2nd, 3rd, 4th etc. This takes a number and returns this string """
 
-    if num == 1:
-        return "1st"
-    elif num == 2:
-        return "2nd"
-    elif num == 3:
-        return "3rd"
+    if num%10 == 1 and num%100 != 11:
+        return "{}st".format(num)
+    elif num%10 == 2 and num%100 != 12:
+        return "{}nd".format(num)
+    elif num%10 == 3 and num%100 != 13:
+        return "{}rd".format(num)
     else:
         return "{}th".format(num)
 

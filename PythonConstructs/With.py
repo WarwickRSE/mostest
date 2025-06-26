@@ -1,5 +1,4 @@
 
-#ENTRY POINT
 # This file is a continuous script. It is not a model of how to write nice code, it's just an exercise! You can read from top to bottom, running along the way
 
 # RESOURCE MANAGEMENT

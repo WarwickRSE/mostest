@@ -1,5 +1,8 @@
 import pytest
-from TestableCode_idea_MontyHall import *
+
+#You'll need to have this file and the code file in the same place for this
+# import to work
+from TestableCode_MontyHall import *
 
 from math import floor
 import os

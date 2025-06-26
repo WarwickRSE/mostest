@@ -48,6 +48,14 @@ problem. Like with the Hubble Space telescope (dubbed "The most precise
 error in history") you can extremely precisely do the wrong thing. In other words
 testing proves the software correct, not the answer.
 
+ANOTHER NOTE: tests should verify that a function does what it promises to,
+not the details of how it is currently implemented. For example, a function
+to locate an item in a list might guarantee that in case of duplicates it will
+return the first instance, or the last, or just one of them. Suppose it is the
+"any one of them case", but currently happens to always return the first - you should
+not write your tests assuming it will always be the first, as this is an implementation
+detail, not a fundamental property of the function.
+
 ## Floating Point Mathematics
 
 Since this workshop is aimed at those with a maths background, we're going to

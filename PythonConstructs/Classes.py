@@ -15,7 +15,7 @@ class ExampleClass:
     
     #We can define functions for the class - actions it can perform. These also get the special 'self' first argument
     def function1(self, value):
-        #Function will 
+        #Function will do something with the class attribute called data
         return self.data == value
 
 if __name__ == "__main__":

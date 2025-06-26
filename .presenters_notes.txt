@@ -1,0 +1,24 @@
+Pre-requisites:
+
+Python (probably since about 3.10)
+PyTest (simple Pip install)
+
+Git is not necessary, except for optional hooks/actions
+    If doing the Github Actions parts, check current state of Actions credits
+    for free accounts
+
+
+Maths to roughly A-level
+    The examples freely assume some basic properties of numbers, basic properties
+    of integers, familiarity with
+    polynomials, root-finding, random numbers etc. None of this needs to be written
+    by attendees, but its assumed that properties of these, and thus how to approach
+    testing their function, is known.
+
+Schedule:
+
+About 15 minutes to talk through the Introduction
+About 1 hour for Part 1, going through Guided examples
+About 1 hour for Part 2, going through PyTest
+    A big chunk of this is section 4, writing tests for real code. The MontyHall problem is used as its familiar and illustrates some real problems
+About 15 mins for a basic Demo of Part 3, hooks or actions

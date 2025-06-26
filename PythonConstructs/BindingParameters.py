@@ -7,6 +7,7 @@ from functools import partial
 
 def func(x, y, z):
     """A function which takes three parameters"""
+    print("  Got values {}, {}, {}".format(x, y, z))
     return x + y + z  #Doing something with them...
 
 #Now suppose we have a reason to fix z, say z=0
@@ -18,7 +19,7 @@ def func_w_z0(x, y):
 print("Manual approach: ", func_w_z0(1, 2))
 
 # The partial function is a function which takes one function and returns us another (c.f. PythonConstructs/Decorators.py)
-func_w_bound_z = partial(func, 0)
+func_w_bound_z = partial(func, z=0)
 print("Partial approach: ", func_w_bound_z(1, 2))
 
 
@@ -47,6 +48,7 @@ def bind_final(val):   # Getting parameter to decorator
 
 @bind_final(val=0)
 def func2(x, y, z):
+    print("  Got values {}, {}, {}".format(x, y, z))
     return x + y + z
 
 print("Double decorator approach: ", func2(1, 2))

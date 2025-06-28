@@ -161,3 +161,5 @@ There is one great counter-point - if you set out to write code that is testable
 So testing our code helps us be more confident in its correctness, AND the process
 of writing tests helps us write better code, Do this thoughtfully, and you
 win both coming and going.
+
+Some notes on what to test, and how to make a good suite, are in the file TestingCheatSheet.md - we suggest looking at this once you've tackled the first few exercises.

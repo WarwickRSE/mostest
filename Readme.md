@@ -57,6 +57,7 @@ The folder Python constructs contains files describing some constructs that you 
 
 - Name - what does that \_\_name\_\_ idiom actually mean?
 - IdentityVsEquality - some details of how '==' and 'is' work, especially for non-basic types
+- TryExcept - some notes on how to catch, raise and distinguish exceptions (errors)
 - BindingParameters - more information on how we can create a function which calls another but with some parameters given pre-chosen values
 - Decorators - how to write your own Python decorator, and what they do
 - Class - how to write and use your own simple class (useful for the PyTest section)

@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     except AssertionError as e:
         print("Well DONE, you caught some errors!")
-    finally:
+    else:
         print("Try again - I promise the code is broken!!") 
 
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     except AssertionError as e:
         print("Well DONE, you caught some errors!")
-    finally:
+    else:
         print("Try again - I promise the code is broken here too!!")
 
     # If you want some hints/'solutions' see the file Answers/GuidedExample04.md
